@@ -1,3 +1,9 @@
+
+这个知识树会根据自己的理解,做比较大的一些改动
+
+
+[原Q&A来源]https://github.com/poetries/FE-Interview-Questions/blob/master/Interview-Questions/Front-end-Developer-Questions%5Bquestion-and-answer-version%5D.md
+
 ## javaScript
 - 函数式编程
 - 原型/原型链
@@ -5,47 +11,46 @@
 - 编译？
 - 上下
 - ES标准、历史
-
-fork for https://github.com/poetries/FE-Interview-Questions/blob/master/Interview-Questions/Front-end-Developer-Questions%5Bquestion-and-answer-version%5D.md
 ### 前端开发知识点
 ---
 
 - HTML&CSS
-  - 对Web标准的理解、浏览器内核差异、兼容性、hack、CSS基本功：布局、盒子模型、选择器优先级、HTML5、CSS3、Flexbox
-  
+  - 对Web标准的理解、浏览器内核差异、兼容性、hack、
+  - CSS基本功：布局、盒子模型、选择器优先级、HTML5、CSS3、Flexbox
+  - 盒模型 —— 外边距、内边距和边框之间的关系，及IE8以下版本的浏览器中的盒模型
+  - DOM结构 —— 两个节点之间可能存在哪些关系以及如何在节点之间任意移动。
+  - DOM操作 —— 如何添加、移除、移动、复制、创建和查找节点等。
+  - 事件 —— 如何使用事件，以及IE和标准DOM事件模型之间存在的差别。
+  - 块级元素与行内元素 —— 怎么用CSS控制它们、以及如何合理的使用它们
+  - 浮动元素 —— 怎么使用它们、它们有什么问题以及怎么解决这些问题。
+  - HTML与XHTML —— 二者有什么区别，你觉得应该使用哪一个并说出理由。
+  - JSON —— 作用、用途、设计结构
 - JavaScript：
   - 数据类型、运算、对象、Function、继承、闭包、作用域、原型链、事件、RegExp、JSON、Ajax、DOM、BOM、内存泄漏、跨域、异步装载、模板引擎、前端MVC、路由、模块化、Canvas、ECMAScript 
-  
+  - XMLHttpRequest —— 这是什么、怎样完整地执行一次GET请求、怎样检测错误。
+  - 严格模式与混杂模式 —— 如何触发这两种模式，区分它们有何意义。
 - 其他：
   - 移动端、响应式、自动化构建、HTTP、离线存储、WEB安全、优化、重构、团队协作、可维护、易用性、SEO、UED、架构、职业生涯、快速学习能力
   
-- DOM结构 —— 两个节点之间可能存在哪些关系以及如何在节点之间任意移动。
-
-- DOM操作 —— 如何添加、移除、移动、复制、创建和查找节点等。
-
-- 事件 —— 如何使用事件，以及IE和标准DOM事件模型之间存在的差别。
-
-- XMLHttpRequest —— 这是什么、怎样完整地执行一次GET请求、怎样检测错误。
-
-- 严格模式与混杂模式 —— 如何触发这两种模式，区分它们有何意义。
-
-- 盒模型 —— 外边距、内边距和边框之间的关系，及IE8以下版本的浏览器中的盒模型
-
-- 块级元素与行内元素 —— 怎么用CSS控制它们、以及如何合理的使用它们
-
-- 浮动元素 —— 怎么使用它们、它们有什么问题以及怎么解决这些问题。
-
-- HTML与XHTML —— 二者有什么区别，你觉得应该使用哪一个并说出理由。
-
-- JSON —— 作用、用途、设计结构
-
 
 ### JavaScript
 ---
 
+#### 语法基础点
+
 **介绍js的基本数据类型**
 
-- Undefined、Null、Boolean、Number、String、 ECMAScript 2015 新增:Symbol(创建后独一无二且不可变的数据类型 )
+- Undefined、Null、Boolean、Number、String、 ECMAScript 2015 新增:Symbol(创建后独一无二且不可变的数据类型)
+
+**JavaScript有几种类型的值？，你能画一下他们的内存图吗？**
+
+- 栈：原始数据类型（Undefined，Null，Boolean，Number、String）
+- 堆：引用数据类型（对象、数组和函数）
+
+- 两种类型的区别是：存储位置不同；
+  - 原始数据类型直接存储在栈(stack)中的简单数据段，占据空间小、大小固定，属于被频繁使用数据，所以放入栈中存储；
+  
+- 引用数据类型存储在堆(heap)中的对象,占据空间大、大小不固定。如果存储在栈中，将会影响程序运行的性能；引用数据类型在栈中存储了指针，该指针指向堆中该实体的起始地址。当解释器寻找引用值时，会首先检索其在栈中的地址，取得地址后从堆中获得实体
 
 **介绍js有哪些内置对象？**
 
@@ -53,18 +58,7 @@ fork for https://github.com/poetries/FE-Interview-Questions/blob/master/Intervie
 - 数据封装类对象：Object、Array、Boolean、Number 和 String
 - 其他对象：Function、Arguments、Math、Date、RegExp、Error
 
-**说几条写JavaScript的基本规范？**
-
-- 1.不要在同一行声明多个变量。
-- 2.请使用 ===/!==来比较true/false或者数值
-- 3.使用对象字面量替代new Array这种形式
-- 4.不要使用全局函数。
-- 5.Switch语句必须带有default分支
-- 6.函数不应该有时候有返回值，有时候没有返回值。
-- 7.For循环必须使用大括号
-- 8.If语句必须使用大括号
-- 9.for-in循环中的变量 应该使用var关键字明确限定作用域，从而避免作用域污染。
-
+#### JavaScript原型
 **JavaScript原型，原型链 ? 有什么特点？**
 
 - 每个对象都会在其内部初始化一个属性，就是prototype(原型)，当我们访问一个对象的属性时，如果这个对象内部不存在这个属性，那么他就会去prototype里找这个属性，这个prototype又会有自己的prototype，于是就这样一直找下去，也就是我们平时所说的原型链的概念。
@@ -84,15 +78,8 @@ console.log(person.getInfo());//它拥有了Func的属性和方法
 console.log(Func.prototype);
 // Func { name="Sean", getInfo=function()}
 ```
-**JavaScript有几种类型的值？，你能画一下他们的内存图吗？**
 
-- 栈：原始数据类型（Undefined，Null，Boolean，Number、String）
-- 堆：引用数据类型（对象、数组和函数）
-
-- 两种类型的区别是：存储位置不同；
-  - 原始数据类型直接存储在栈(stack)中的简单数据段，占据空间小、大小固定，属于被频繁使用数据，所以放入栈中存储；
-  
-- 引用数据类型存储在堆(heap)中的对象,占据空间大、大小不固定。如果存储在栈中，将会影响程序运行的性能；引用数据类型在栈中存储了指针，该指针指向堆中该实体的起始地址。当解释器寻找引用值时，会首先检索其在栈中的地址，取得地址后从堆中获得实体
+#### 常见Q&A
 
 **如何将字符串转化为数字，例如'12.3b'?**
 
