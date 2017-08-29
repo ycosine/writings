@@ -1,0 +1,33 @@
+11.请谈一下你对网页标准和标准制定机构重要性的理解。
+w3c存在的意义就是让浏览器兼容性问题尽量小，首先是他们对浏览器开发者的约束，然后是对开发者的约束。
+
+12.什么是FOUC（无样式内容闪烁）？你如何来避免FOUC？
+FOUC(Flash Of Unstyled Content)--文档样式闪烁
+
+<style type="text/css"media="all">@import"../fouc.css";</style>而引用CSS文件的@import就是造成这个问题的罪魁祸首。IE会先加载整个HTML文档的DOM，然后再去导入外部的CSS文件，因此，在页面DOM加载完成到CSS导入完成中间会有一段时间页面上的内容是没有样式的，这段时间的长短跟网速，电脑速度都有关系。解决方法简单的出奇，只要在<head>之间加入一个<link>或者<script>元素就可以了。
+
+13.doctype（文档类型）的作用是什么？你知道多少种文档类型？
+此标签可告知浏览器文档使用哪种HTML或XHTML规范。该标签可声明三种DTD类型，分别表示严格版本、过渡版本以及基于框架的HTML文档。
+
+HTML 4.01规定了三种文档类型：Strict、Transitional以及Frameset。
+
+XHTML 1.0规定了三种XML文档类型：Strict、Transitional以及Frameset。
+
+Standards（标准）模式（也就是严格呈现模式）用于呈现遵循最新标准的网页，而Quirks（包容）模式（也就是松散呈现模式或者兼容模式）用于呈现为传统浏览器而设计的网页。
+
+14.浏览器标准模式和怪异模式之间的区别是什么？
+W3C标准推出以后，浏览器都开始采纳新标准，但存在一个问题就是如何保证旧的网页还能继续浏览，在标准出来以前，很多页面都是根据旧的渲染方法编写的，如果用的标准来渲染，将导致页面显示异常。为保持浏览器渲染的兼容性，使以前的页面能够正常浏览，浏览器都保留了旧的渲染方法（如：微软的IE）。这样浏览器渲染上就产生了Quircks mode和Standars mode，两种渲染方法共存在一个浏览器上。IE盒子模型和标准W3C盒子模型：ie的width包括：padding\border。标准的width不包括：padding\border
+
+ 在js中如何判断当前浏览器正在以何种方式解析？
+         document对象有个属性compatMode,它有两个值：BackCompat对应quirks mode，CSS1Compat对应strict mode。
+
+15.使用XHTML的局限有哪些？
+XHTML 与HTML的区别为：
+
+XHTML 元素必须被正确地嵌套。
+XHTML 元素必须被关闭。
+标签名必须用小写字母。
+XHTML 文档必须拥有根元素。
+局限：
+
+所有的 XHTML 元素都必须被正确地嵌套，XHTML 必须拥有良好的结构，所有的标签必须小写，并且所有的 XHTML 元素必须被关闭。所有的 XHTML 文档必须拥有 DOCTYPE 声明，并且 html、head、title 和 body 元素必须存在。虽然代码更加的优雅，但缺少容错性，不利于快速开发。
