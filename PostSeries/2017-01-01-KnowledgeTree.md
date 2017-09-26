@@ -1,16 +1,7 @@
 
-这个知识树会根据自己的理解,做比较大的一些改动
 
+[面试问答Q&A来源]https://github.com/poetries/FE-Interview-Questions/blob/master/Interview-Questions/Front-end-Developer-Questions%5Bquestion-and-answer-version%5D.md
 
-[原Q&A来源]https://github.com/poetries/FE-Interview-Questions/blob/master/Interview-Questions/Front-end-Developer-Questions%5Bquestion-and-answer-version%5D.md
-
-## javaScript
-- 函数式编程
-- 原型/原型链
-- 类型
-- 编译？
-- 上下
-- ES标准、历史
 ### 前端开发知识点
 ---
 
