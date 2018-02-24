@@ -1,3 +1,10 @@
+---
+title: Just hack'n
+subtitle: a
+description: Nothing to see here
+time: 2018-2-22 13:44:29
+---
+
 # JavaScript变量都是按值传递？
 
 > 这个问题事实上很让人困扰，其实大家也进行了很多的总结归纳。说来滑稽，得到很多“权威”的解释后，我依然云里雾里，在经过一波几折后的折腾研究，才真正理解
