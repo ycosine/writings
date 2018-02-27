@@ -1,7 +1,7 @@
 ---
-title: Just hack'n
-subtitle: a
-description: Nothing to see here
+title: 值与引用（1）
+subtitle: 深入系列
+description: JavaScript变量都是按值传递？你有自己的标准答案吗？
 time: 2018-2-22 13:44:29
 ---
 
@@ -58,6 +58,7 @@ JavaScript就是这种方式，我就不再解释了
 事实上对于我来说这些概念十分的模糊且带有直觉性。
 当然很大程度是因为中文的说法本身带有的语义性。如果原先没有对概念有清晰的认识的话，很容易受到你熟悉语言的直觉干扰。
 
+那么我的问题是什么呢？好的
 ### 重新认识赋值“=”
 ``` javascript
 var a = 1
@@ -67,36 +68,9 @@ var c = { name: 'jack'}
 var d = c
 d.name = 'peter'
 d = { name: 'Bob'}
-
-// todo 待补充
 ```
-首先 变量声明赋值因为提升，所以变量总是先声明后赋值
-```
-var a
-a = 1
-```
-<!-- 下面的说法是比较个人的理解：
-var a 会LHS访问作用域，是否存在相同变量，如果存在则忽略当前声明
-a = 1 会LHS访问作用域寻找a，不关心a当前的值是多少，只想找到=2的赋值目标
-跳过部分
-b = a 会LHS寻找b,RHS寻找a
-**关键**
-- LHS是使用变量名找到地址
-- RHS是使用变量名找到地址，再通过地址再去找到具体值
-我们说某某变量存了什么值
-往往是指RHS的结果
-比如console.log(b),就是对b进行RHS查询
-也就是RHS的查询我们也可以理解为LHS也是可以相当于其中一步
-- ** 赋值的操作都是地址的传递,基本值和复合值的区别只在存放的位置 ** 
-d.name = 'peter'的核心是寻址LHS -->
-
-待续写，这里会分开一篇文章写RHS
-
-
-
-
 
 ## 参考资料
-小红书
-你不知道的JavaScript的部分章节
+- 小红书《JavaScript高级程序设计》
+- 《你不知道的JavaScript》部分章节
 [JavaScript中函数都是值传递吗？](https://www.zhihu.com/question/51018162)
