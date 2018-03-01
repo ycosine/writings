@@ -1,0 +1,8 @@
+var a = new Boolean( false )
+var b = new Number(0)
+var c = new String("")
+console.log(a && b && c)
+console.log(!!(a && b && c))
+console.log(Boolean(a && b && c))
+console.log(a && b && c == true)
+console.log(a && b && c == 1)
