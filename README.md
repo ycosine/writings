@@ -6,9 +6,9 @@
 (目录结构优化中，打算用diff做)
 这里先随便最近更新的 - -
 
-[深入JavaScript-类型和值-类型和值基础](https://github.com/ycosine/writings/blob/master/posts/PostSeries/2017-01-01-%E6%B7%B1%E5%85%A5%E7%B3%BB%E5%88%97-%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%80%BC-%E5%9F%BA%E7%A1%80%EF%BC%881%EF%BC%89.md)
-[深入JavaScript-类型和值-类型运算符](https://github.com/ycosine/writings/blob/master/posts/PostSeries/2017-01-01-%E6%B7%B1%E5%85%A5%E7%B3%BB%E5%88%97-%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%80%BC-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%EF%BC%882%EF%BC%89.md)
-[深入系列-值与引用](https://github.com/ycosine/writings/blob/master/posts/PostSeries/2018-02-17-%E6%B7%B1%E5%85%A5%E7%B3%BB%E5%88%97-%E5%80%BC%E4%B8%8E%E5%BC%95%E7%94%A8.md)
+- [深入JavaScript-类型和值-类型和值基础](https://github.com/ycosine/writings/blob/master/posts/PostSeries/2017-01-01-%E6%B7%B1%E5%85%A5%E7%B3%BB%E5%88%97-%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%80%BC-%E5%9F%BA%E7%A1%80%EF%BC%881%EF%BC%89.md)
+- [深入JavaScript-类型和值-类型运算符](https://github.com/ycosine/writings/blob/master/posts/PostSeries/2017-01-01-%E6%B7%B1%E5%85%A5%E7%B3%BB%E5%88%97-%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%80%BC-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%EF%BC%882%EF%BC%89.md)
+- [深入系列-值与引用](https://github.com/ycosine/writings/blob/master/posts/PostSeries/2018-02-17-%E6%B7%B1%E5%85%A5%E7%B3%BB%E5%88%97-%E5%80%BC%E4%B8%8E%E5%BC%95%E7%94%A8.md)
 
 ## 说点什么
 　　我一直鼓励自己多写文字，感觉文字能使人安静，使人在安静中不断挖掘自己的思想。然而一直没怎么写的原因，事实上除了懒以外，更大的失落是得不到认同，从中学时代开始，我的作文就没怎么得过高分，我往往写出很多乱七八糟的东西，让人抓不到重点，只能浮光略过一些。
