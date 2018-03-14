@@ -54,11 +54,14 @@ async function walk(dir,done){
             asyResolveMarked(filePath).then(render=>{
                 // console.log(render)
                 results.push({
-                    ino:stat.ino,
+                    sha:stat.ino,
                     size:stat.size,
-                    filePath:dir,
-                    filename,
-                    attributes:render.attributes,
+                    path:dir,
+                    name:filename,
+                    categories:render.attributes.categories || null,
+                    date: render.attributes.date || null,
+                    title: render.attributes.title || null,
+                    tags: render.attributes.tags || null,
                     // content:render.content,
                 })
                 // todo 和原有的store对比,如果有则不生成

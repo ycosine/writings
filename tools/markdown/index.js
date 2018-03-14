@@ -2,8 +2,6 @@ const markdownIt = require('markdown-it')
 const emoji = require('markdown-it-emoji')
 const mark = require('markdown-it-mark')
 const markdownItTocAndAnchor = require('markdown-it-toc-and-anchor').default
-const subscript = require('markdown-it-sub')
-const superscript = require('markdown-it-sup')
 // import footnote from 'markdown-it-footnote'
 // import deflist from 'markdown-it-deflist'
 // import abbreviation from 'markdown-it-abbr'
@@ -11,14 +9,13 @@ const superscript = require('markdown-it-sup')
 // import katex from 'markdown-it-katex'
 // import tasklists from 'markdown-it-task-lists'
 var mdIt = markdownIt({
-  html: true,
+  html: false,
   linkify: true,
+  breaks: true,
   typography: true,
 })
 // .use(emoji)
 .use(mark)
-.use(subscript)
-.use(superscript)
 
 // mdIt.use(markdownItTocAndAnchor)
     
