@@ -1,3 +1,6 @@
+const initMixin = require('./init')
+const initIo = require('./io')
+const initRender = require('../render')
 
 function Poster (options){
     if (process.env.NODE_ENV !== 'production' && !(this instanceof Poster)) {
@@ -5,7 +8,8 @@ function Poster (options){
     }
     this._init(options)
 }
-Poster.prototype._init = function(options){
-    
-}
+initMixin(Poster)
+initIo(Poster)
+initRender(Poster)
+
 module.exports = Poster
