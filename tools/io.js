@@ -1,13 +1,42 @@
 var fs = require('fs')
 var path = require('path')
-var { readFile, readDir, fsStat, writeFile } = require('./file')
 
+var fsStat = function fsStat(dir){
+    return new Promise(function (resolve, reject) {
+        fs.stat(dir, (error, data) => {
+            if (error) return reject(error);
+            resolve(data);
+        });
+    });
+};
+var readDir = function readDir(dir){
+    return new Promise(function (resolve, reject) {
+        fs.readdir(dir, (error, data) => {
+            if (error) return reject(error);
+            resolve(data);
+        });
+    });
+};
 module.exports = function(Poster){
-    Poster.prototype._writeFile = writeFile
-    Poster.prototype._joinPath = function(path1,path2){
-        return path.resolve(path1,path2)
+    Poster.prototype.writeFile = function writeFile(filePath,fileData) {
+        return new Promise(function (resolve, reject) {
+            fs.writeFile(filePath,fileData,(err) => {
+                if (err) return reject(err);
+                console.log(`the file has been saved: ${filePath}`)
+            })
+        })
     }
-    Poster.prototype._readFile = readFile,
+    Poster.prototype.readFile = function(fileName){
+        return new Promise(function (resolve, reject) {
+            fs.readFile(fileName, 'utf8', (error, data) => {
+                if (error) return reject(error);
+                resolve(data);
+            });
+        });
+    }
+    Poster.prototype.joinPath = function(path1,path2){
+        return path.join(path1,path2)
+    }
     Poster.prototype._writeStore = async function _writeStore(path,results){
         await this.writeFile(path.join(path,'store.json'),JSON.stringify(results))
     }
