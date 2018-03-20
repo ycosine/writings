@@ -14,7 +14,7 @@ module.exports = {
             function solve(fileData){
                 var obj = {}
                 markdownIt.set({
-                    tocClassName: 'article-toc',
+                    tocClassName: "article-toc-ul",
                     tocCallback: function(tocMarkdown, tocArray, tocHtml) {
                         console.log(tocHtml)
                         obj.tocHtml = tocHtml

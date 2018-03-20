@@ -14,8 +14,8 @@ var mdIt = markdownIt({
   breaks: true,
   typography: true,
 })
-.use(emoji)
-.use(mark)
+// .use(emoji)
+// .use(mark)
 .use(markdownItTocAndAnchor)
 // mdIt.use(markdownItTocAndAnchor)
     
