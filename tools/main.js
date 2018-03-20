@@ -2,13 +2,13 @@ var Poster = require('./instance')
 var pugRender = require('./plugin/pug')
 var cosineblog = new Poster({
     type: 'markdown',
-    input:'../posts/test',
+    input:'../posts/PostSeries',
     output:'../static',
 })
 cosineblog.use(pugRender,{
-    template:'postTemplate.pug',
+    template:'template.pug',
 })
 cosineblog.render(function(results){
-    console.log(results)
+    console.log('render callback')
 })
 //cosineblog.renderStore()

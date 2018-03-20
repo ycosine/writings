@@ -38,12 +38,12 @@ module.exports = function(Poster){
             // 文件流解析
             results = results.map(async fileinfo=>{
               var path = this.joinPath(fileinfo.path,fileinfo.name)
-              var fileData = await this.readFile(path)
-              var filterData = {}
+              var fileData = {}
+              fileData.string = await this.readFile(path)
               this.streamFilter.forEach(solveFilter=>{
-                Object.assign(filterData,solveFilter(fileData))
+                fileData = Object.assign(fileData,solveFilter(fileData))
               })
-              return filterData
+              return Object.assign(fileData,fileinfo)
             })
             Promise.all(results).then(results=>{
                 if(callback && typeof callback === "function"){
@@ -59,9 +59,9 @@ module.exports = function(Poster){
         })
     }
     Poster.prototype.renderHtml = async function(results){
-        // 清空文件夾？
-        this.store.forEach(async file=>{
-            await this.writeFile(path.join(this.OUTPUT_PATH + '/posts/','store.html'),file.html) 
+        this.emptyDir(this.OUTPUT_PATH + '/posts/')
+        await results.forEach(async file=>{
+            await this.writeFile(this.joinPath(this.OUTPUT_PATH + '/posts/',`${file.sha}.html`),file.htmlTemplate) 
         })
     }
     Poster.prototype.renderStore = async function(results){
@@ -78,6 +78,6 @@ module.exports = function(Poster){
             })
         }
         results = storeFilter(results)
-        await this.writeFile(path.join(this.OUTPUT_PATH,'store.json'),JSON.stringify(results))
+        await this.writeFile(this.joinPath(this.OUTPUT_PATH,'store.json'),JSON.stringify(results))
     }
 }

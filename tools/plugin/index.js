@@ -4,7 +4,7 @@ module.exports = {
     matter:{
         install(vm,options){
             function solve(file){
-                return matter(file)
+                return matter(file.string)
             }
             this.streamFilter.push(solve)
         }
@@ -12,9 +12,16 @@ module.exports = {
     markdown:{
         install(options){
             function solve(fileData){
-                return {
-                    markdown:markdownIt.render(fileData.body)
-                }
+                var obj = {}
+                markdownIt.set({
+                    tocClassName: 'article-toc',
+                    tocCallback: function(tocMarkdown, tocArray, tocHtml) {
+                        console.log(tocHtml)
+                        obj.tocHtml = tocHtml
+                    }
+                })
+                obj.markdown = markdownIt.render(fileData.body)
+                return obj
             }
             this.streamFilter.push(solve)
         }
