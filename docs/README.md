@@ -5,7 +5,7 @@ tagline: 理能顿悟，事需渐修
 footer: Cosine's Blog
 ---
 
-## 分区
+## 本来写目录
 
 - [深入 JavaScript-类型和值-类型和值基础](https://github.com/ycosine/writings/blob/master/posts/PostSeries/2017-01-01-%E6%B7%B1%E5%85%A5%E7%B3%BB%E5%88%97-%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%80%BC-%E5%9F%BA%E7%A1%80%EF%BC%881%EF%BC%89.md)
 - [深入 JavaScript-类型和值-类型运算符](https://github.com/ycosine/writings/blob/master/posts/PostSeries/2017-01-01-%E6%B7%B1%E5%85%A5%E7%B3%BB%E5%88%97-%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%80%BC-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%EF%BC%882%EF%BC%89.md)
