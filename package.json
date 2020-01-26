@@ -1,39 +1,27 @@
 {
-  "name": "writingsource",
+  "name": "writings",
   "version": "1.0.0",
-  "description": "这里是小贤的博客文章，喜欢请star给我动力吧！",
+  "description": "blog",
   "main": "index.js",
-  "dependencies": {
-    "_node-stdio@0.0.7@node-stdio": "^0.0.7",
-    "front-matter": "^2.3.0",
-    "gray-matter": "^3.1.1",
-    "markdown-it": "^8.4.1",
-    "markdown-it-abbr": "^1.0.4",
-    "markdown-it-deflist": "^2.0.3",
-    "markdown-it-emoji": "^1.4.0",
-    "markdown-it-footnote": "^3.0.1",
-    "markdown-it-ins": "^2.0.0",
-    "markdown-it-katex": "^2.0.3",
-    "markdown-it-mark": "^2.0.0",
-    "markdown-it-sub": "^1.0.0",
-    "markdown-it-sup": "^1.0.0",
-    "markdown-it-task-lists": "^2.1.1",
-    "markdown-it-toc-and-anchor": "^4.1.2",
-    "marked": "^0.3.17",
-    "pug": "^2.0.1"
+  "directories": {
+    "doc": "docs"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ycosine/writingSource.git"
+    "url": "git+https://github.com/ycosine/writings.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ycosine/writingSource/issues"
+    "url": "https://github.com/ycosine/writings/issues"
   },
-  "homepage": "https://github.com/ycosine/writingSource#readme"
+  "homepage": "https://github.com/ycosine/writings#readme",
+  "devDependencies": {
+    "vuepress": "^1.2.0",
+    "vuepress-theme-reco": "^1.2.1"
+  }
 }
