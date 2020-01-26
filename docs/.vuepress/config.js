@@ -14,13 +14,7 @@ module.exports = {
       "/code/": [
         "" /* /foo/ */,
         "js-value-type-1" /* /foo/one.html */,
-        "two" /* /foo/two.html */
-      ],
-
-      "/bar/": [
-        "" /* /bar/ */,
-        "three" /* /bar/three.html */,
-        "four" /* /bar/four.html */
+        "js-value-type-2" /* /foo/two.html */
       ],
       // fallback
       "/": ["" /* / */]
