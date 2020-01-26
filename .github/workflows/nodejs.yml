@@ -31,8 +31,8 @@ jobs:
       # npm install
       - name: npm install
         run: npm install
-      - name: build
-        run: npm run build
+      - name: npm build
+        run: npm run docs:build
       # 设置阿里云OSS的 id/secret，存储到 github 的 secrets 中
       - name: setup aliyun oss
         uses: manyuanrong/setup-ossutil@master
